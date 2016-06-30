@@ -1,0 +1,30 @@
+.event {
+	background-color: #315ff5;
+	border-radius: 25px;
+	margin-bottom: 10px; 
+	box-shadow: 5px 5px 2px #888888;
+	border: solid 2px black;	
+	cursor: pointer;
+}
+
+.event.focused {
+	background-color: #9FCDF5;
+	border-color: white;
+	color: black;	
+}
+
+.eventInfo {
+	margin-left: 10px;
+}
+
+.eventName {
+	font-size: 1.3em;
+	text-decoration: underline;
+	margin-left: 5px;
+}
+
+.eventDesc {
+	font-size: 1em;
+	margin-top: -5px;
+	margin-left: 5px;
+}

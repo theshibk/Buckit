@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		    <script src="bower_components/angular/angular.min.js"></script>
+		    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+		    <script src="biApp.js"></script>
+		    <script src="listController.js"></script>
+		    <script src="listEvent-directive.js"></script>
+		    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		    
+		    
+		    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+		    <link rel="stylesheet" type="text/css" href="main.css">
+		       
+	</head>
+	<body ng-app="biApp">
+		<nav class="navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<div class="navbar-brand">BuckIt</div>
+				</div>
+			</div> 
+		</nav>
+		<div class="container-fluid">
+		<main class="listBlock" ng-controller="listCtrl">
+			<div class="listHeader">
+				<div class="title">{{data.currentList.name}}</div>
+				<div class="listDesc">{{data.currentList.description}}</div>
+			</div>
+				<div ng-repeat="event in data.toDo" >
+					<list-event event="event"></list-event>
+				</div>
+			<div class="listHeader">Completed</div>
+			<div ng-repeat="event in data.completed" >
+					<list-event event="event"></list-event>
+				</div>
+					
+		</main>
+		</div>
+	</body>
+</html>

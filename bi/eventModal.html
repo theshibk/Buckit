@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="eventModal.css">
+</head>
+<div class="eventModal" >
+		<div class="eventTitle">{{event.name}}</div>
+		<div class="eventCarousel" class="container-fluid">
+			<uib-carousel active="0">
+				<uib-slide ng-repeat="slide in event.album track by $index" index="$index">
+					<img ng-src="{{slide.image}}">
+				</uib-slide>
+			</uib-carousel>
+		</div>
+		<div class="eventCaption">{{event.description}}</div>
+		<div class="commentSection"></div>	
+</div>
+</html>

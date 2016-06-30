@@ -1,0 +1,21 @@
+.eventTitle{
+	text-align: center;
+	color: black;
+	background-color: gray;
+	border-bottom: solid 2px black;
+	font-size: 1.4em;
+	font-style: sans-serif;
+	
+}
+
+.eventCaption{
+	color: black;
+	margin-top: 5px;
+	
+	
+}
+
+.commentSection{
+	
+}
+
