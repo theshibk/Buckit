@@ -1,0 +1,28 @@
+.comment-box{
+	background-color: #b3b0b7;
+	margin-top: 10px;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 10px;
+	border: solid 2px #532327;
+}
+
+.thumbnail{
+	height: 32px;
+	width: 32px;
+	margin-left: 10px;
+	border: none;
+	padding: 0px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.userName{
+	font-weight: bold;
+}
+
+.newComment{
+	margin-top: 5px;
+	resize: none;
+	width: 100%;
+}

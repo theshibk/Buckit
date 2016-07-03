@@ -1,0 +1,32 @@
+.eventTitle{
+	text-align: center;
+	color: white;
+	background-color: #5f2932;
+	font-size: 1.4em;
+	font-style: sans-serif;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-left: 3px;
+	margin-right: 3px;
+	border-radius: 5px;
+	
+}
+
+.eventCarousel{
+		width: 590px;
+		height:300px;
+		margin-left: 4px;
+}
+
+.eventCaption{
+	color: #3b1e22;
+	padding: 5px;
+	margin-left: 5px;
+}
+
+.eventModal{
+	border-radius: 5px;
+	background-color: #fff5fa;
+}
+
+

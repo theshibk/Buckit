@@ -5,37 +5,45 @@
 		    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
 		    <script src="biApp.js"></script>
 		    <script src="listController.js"></script>
-		    <script src="listEvent-directive.js"></script>
+		    <script src="directives/event/listEvent-directive.js"></script>
+		    <script src="directives/editableTextField/editableTextField-directive.js"></script>
+		    <script src="directives/comment/comment-directive.js"></script>
 		    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 		    
 		    
 		    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> 
-		    <link rel="stylesheet" type="text/css" href="main.css">
-		       
+		    <link rel="stylesheet" type="text/css" href="main.css">	       
 	</head>
-	<body ng-app="biApp">
-		<nav class="navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<div class="navbar-brand">BuckIt</div>
-				</div>
-			</div> 
-		</nav>
+	<body ng-app="biApp" ng-controller="listCtrl">
+	<header class="container-fluid">
+		<div class="pageHeader row">
+			<span>BuckIt</span>
+			<span class="pull-right userBlock" ng-class="{focused : hover}" ng-mouseenter="hover=true" 
+				ng-mouseleave="hover=false">
+				<span><img ng-src="{{locals.currentUser.userProfile.profilePicture}}" class="headerThumbnail"></span>
+				<span class="headerUsername">{{locals.currentUser.username}}</span>
+			</span>
+			<span class="pull-right dividerVertical" style="margin-top:4px;height:1.2em;"></span>
+			
+		</div>
+	</header>
 		<div class="container-fluid">
-		<main class="listBlock" ng-controller="listCtrl">
+		<div class="row">
+		<div class="sidebar col-md-2"></div>
+		<main class="listBlock col-md-8" >
 			<div class="listHeader">
-				<div class="title">{{data.currentList.name}}</div>
-				<div class="listDesc">{{data.currentList.description}}</div>
+			<div class="title"><editable-text-field textdata="locals.currentList.name"></editable-text-field></div>
+				<div class="listDesc">{{locals.currentList.description}}</div>
 			</div>
-				<div ng-repeat="event in data.toDo" >
+				<div ng-repeat="event in locals.toDo" >
 					<list-event event="event"></list-event>
 				</div>
 			<div class="listHeader">Completed</div>
-			<div ng-repeat="event in data.completed" >
+			<div ng-repeat="event in locals.completed" >
 					<list-event event="event"></list-event>
 				</div>
-					
 		</main>
+		</div>
 		</div>
 	</body>
 </html>

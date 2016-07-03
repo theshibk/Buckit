@@ -1,0 +1,15 @@
+.editableTextField.mouseover{
+	background-color: #ebccda;
+}
+
+input{
+	width: 100%;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+.editableTextField{
+
+}

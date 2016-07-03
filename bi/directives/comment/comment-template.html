@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="directives/comment/comment.css">
+</head>
+<div class="container-fluid comment-box">
+	<div class="comment" ng-repeat="comment in comments">
+		<div class="row">
+			<div class="col-md-1"><img ng-src="{{comment.userProfile.profilePicture}}" class="thumbnail"></div>
+			<div class="col-md-11">
+				<span class="userName">{{comment.userProfile.name}}:</span>
+				<span class="content">{{comment.content}}</span>
+			</div>
+		</div>
+		<div class="dividerHorizontal" style="width:97%;margin-left:10px;margin-right:10px;"></div>
+	</div>
+	<textarea class="newComment"></textarea>
+</div>
+</html>
