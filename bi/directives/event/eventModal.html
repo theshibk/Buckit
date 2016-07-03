@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script src="directives/comment/comment-directive.js"></script>
+	<link rel="stylesheet" type="text/css" href="directives/event/eventModal.css">
+</head>
+<div class="eventModal" >
+		<div class="eventTitle">{{event.name}}</div>
+		<div class="container-fluid">
+		<div class="row">
+			<div class="eventCarousel">
+				<uib-carousel active="0">
+					<uib-slide ng-repeat="slide in event.album track by $index" index="$index">
+						<img ng-src="{{slide.image}}" style="height:300px;width:590px;">
+					</uib-slide>
+				</uib-carousel>
+			</div>
+		<div class="eventCaption">{{event.description}}</div>
+		<div class="commentSection">
+			<comment comments="event.comments"></comment>
+		</div>	
+		</div>
+		</div>
+</div>
+</html>

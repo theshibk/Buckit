@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="directives/event/event.css">
+</head>
+<div class="event" ng-class="{focused : hover}" ng-mouseenter="hover = true" 
+				ng-mouseleave="hover=false" ng-click="actions.openEvent()">
+	<div class="row">
+		<div class="col-md-1">
+			<img ng-src="{{event.thumbnail}}" class="thumbnail-list img-circle">
+		</div>
+		<div class="eventInfo col-md-6">
+			<div class="eventName">{{event.name}}</div>
+			<div class="eventDesc">{{event.description}}</div>	
+		</div>
+	</div>
+</div>
+</html>
